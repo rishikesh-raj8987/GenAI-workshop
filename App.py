@@ -3,7 +3,7 @@ import google.generativeai as genai
 
 st.set_page_config(page_title="Rishi ChatBot", page_icon="🤖")
 
-genai.configure(api_key=st.secrets["api_key"])
+genai.configure(api_key="AIzaSyBjSw94fARVmJtt3FfcrJg1KaRvons1Eps")
 model=genai.GenerativeModel("models/gemini-2.5-flash")
 
 st.title("Rishi ChatBot 🤖")
