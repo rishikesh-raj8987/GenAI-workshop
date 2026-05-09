@@ -26,5 +26,9 @@ if prompt:
     with st.chat_message("assistant"):
         with st.spinner("Generating response..."):
             response=model.generate_content(prompt)
-            st.write(response.text)
+            ai_response = response.text
+            st.write(ai_response)
+    st.session_state.messages.append({"role": "assistant", 
+                                      "content": ai_response}
+                                      )
             
