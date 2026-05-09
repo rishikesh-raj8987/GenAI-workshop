@@ -23,7 +23,8 @@ if prompt:
     with st.chat_message("user"):
         st.write(prompt)
 
-    response = model.generate_content(prompt)
-    st.session_state.messages.append({"role": "assistant", "content": response.text})
     with st.chat_message("assistant"):
-        st.write(response.text)
+        with st.spinner("Generating response..."):
+            response=model.generate_content(prompt)
+            st.write(response.text)
+            
